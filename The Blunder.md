@@ -62,5 +62,25 @@ SELECT
         )
 FROM employees;
 ```
+**Explanation of the Query:**
 
+- SELECT: We’re querying the database to calculate a single value: the difference between the actual average salary and the miscalculated average salary, rounded up.
 
+- AVG(salary): This calculates the *__actual__* average salary of all employees in the employees table.
+
+- REPLACE(salary, 0, ''): For each salary, this removes all zeros. For example:
+    - If a salary is 10500, it becomes 155.
+    - If a salary is 7000, it becomes 7.
+    - This simulates the error Samantha made due to her broken 0 key.
+
+- AVG(REPLACE(salary, 0, '')): This calculates the __*miscalculated average*__ salary based on the salaries with zeros removed.
+
+- AVG(salary) - AVG(REPLACE(salary, 0, '')): Subtracts the __*miscalculated average*__ from the actual average to find the error (the difference Samantha wants to know).
+
+- CEIL(. . .): Rounds the difference up to the nearest integer, as instructed in the question.
+
+- FROM employees: Specifies the table (employees) from which to retrieve the salary data.
+
+------------------------------
+
+The query helps Samantha by calculating the amount of error in her average salary calculation. It accounts for the fact that she unknowingly excluded zeros, finds the difference between the actual and miscalculated averages, and rounds the result up to the nearest integer.
