@@ -1,5 +1,9 @@
 Query the list of CITY names from __STATION__ that either do not start with vowels and do __not__ end with vowels. Your result cannot contain duplicates.
 
+__Input Format__
+
+The __STATION__ table is described as follows:
+
   __STATION__     
 |Field        | Type                     
 |------------ | ---------
