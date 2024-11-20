@@ -17,3 +17,7 @@ where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude
 
 Here is the query:
 ```SQL
+SELECT TRUNC(SUM(LAT_N), 4) AS sum_lat
+FROM station
+WHERE LAT_N > 38.7880 AND LAT_N < 137.2345;
+```
