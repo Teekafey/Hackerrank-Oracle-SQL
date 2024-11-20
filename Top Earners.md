@@ -50,4 +50,16 @@ WHERE ROWNUM = 1;
 
 **Explanation of the Query:**
 
-- SELECT * FROM(. . .) : This means the query will retrieve all the columns from the subquery result,
+- SELECT * FROM(. . .) : This means this OUTER query will retrieve all the columns from the subquery result.
+
+- SELECT salary * months: This calculates the total earnings for each employee by multiplying their monthly salary (salary) by the number of months they worked (months).
+
+- COUNT(*): This counts the number of employees with the same total earnings (useful to identify how many employees share the same maximum earnings).
+
+- AS total_earnings: It renames the result as total_earnings using the alias AS.
+
+- FROM employee: This specifies the table (employee) from which the data will be retrieved.
+
+- GROUP BY salary * months: This groups the data by the calculated total_earnings. For each unique value of salary * months, the query calculates:
+      - The total earnings (total_earnings).
+      - The count of employees (COUNT(*)).
