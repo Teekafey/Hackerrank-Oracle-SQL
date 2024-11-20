@@ -54,12 +54,19 @@ WHERE ROWNUM = 1;
 
 - SELECT salary * months: This calculates the total earnings for each employee by multiplying their monthly salary (salary) by the number of months they worked (months).
 
-- COUNT(*): This counts the number of employees with the same total earnings (useful to identify how many employees share the same maximum earnings).
-
 - AS total_earnings: It renames the result as total_earnings using the alias AS.
+
+- COUNT(*): This counts the number of employees with the same total earnings (useful to identify how many employees share the same maximum earnings).
 
 - FROM employee: This specifies the table (employee) from which the data will be retrieved.
 
 - GROUP BY salary * months: This groups the data by the calculated total_earnings. For each unique value of salary * months, the query calculates:
-      - The total earnings (total_earnings).
-      - The count of employees (COUNT(*)).
+  
+   - The total earnings (total_earnings).
+   - The count of employees (COUNT(*)).
+
+       Remember you cannot use an alias in the group by statement.
+
+- ORDER BY total_earnings DESC: This orders the grouped results by total_earnings in descending order. As a result: The row with the highest total earnings appears first.
+
+- WHERE ROWNUM = 1: This limits the result to only the first row of the ordered subquery result. Since the subquery is sorted by total_earnings in descending order, the first row represents the maximum total earnings and its associated count.
