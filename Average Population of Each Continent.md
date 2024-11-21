@@ -48,14 +48,14 @@ GROUP BY co.Continent;
 ```
 
 **Explanation of the Query:**
-SELECT co.Continent, 
-                 FLOOR(AVG(ci.Population)) AS avg_citypop:
 
-- co.Continent: Retrieves the name of each continent from the Country table.
+- SELECT co.Continent, FLOOR(AVG(ci.Population)) AS avg_citypop:
 
-- FLOOR(AVG(ci.Population)): The FLOOR function rounds values down to the nearest integer. So this calculates the average population of cities within each continent (from the City table) and rounds it down to the nearest integer.
+  co.Continent: Retrieves the name of each continent from the Country table.
 
-- AS  avg_citypop: Assigns an alias ( avg_citypop) to the calculated value.
+  FLOOR(AVG(ci.Population)): The FLOOR function rounds values down to the nearest integer. So this calculates the average population of cities within each continent (from the City table) and rounds it down to the nearest integer.
+
+  AS  avg_citypop: Assigns an alias ( avg_citypop) to the calculated value.
 
 FROM Country co:
 
