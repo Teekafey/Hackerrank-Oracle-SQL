@@ -34,4 +34,4 @@ WHERE LAT_N < 137.2345;
   
 - FROM station: Specifies the STATION table as the source of data.
 
-- WHERE **LAT_N < 137.2345**: Filters rows where the LAT_N column's values less than **137.2345**. Only these rows are considered for the sum calculation.
+- WHERE **LAT_N < 137.2345**: Filters rows where the LAT_N column's values less than **137.2345**. Only these rows are considered for the max calculation.
