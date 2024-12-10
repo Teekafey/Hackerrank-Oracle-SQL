@@ -1,4 +1,4 @@
-Query the sum of Northern Latitudes (LAT_N) from __STATION__  less than **137.2345**. Truncate your answer to **4**  decimal places.
+Query the greatest value of Northern Latitudes (LAT_N) from __STATION__  less than **137.2345**. Truncate your answer to **4**  decimal places.
 
 __Input Format__
 
