@@ -2,8 +2,6 @@ Query the Western Longitude (LONG_W) for the largest Northern Latitudes (LAT_N) 
 
 __Input Format__
 
-__Input Format__
-
 The __STATION__ table is described as follows:
 
   __STATION__     
@@ -27,3 +25,6 @@ WHERE LAT_N =
        FROM station
        WHERE LAT_N < 137.2345);
 ```
+
+**Explanation of the Query:**
+
