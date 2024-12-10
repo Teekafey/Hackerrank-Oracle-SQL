@@ -18,7 +18,7 @@ where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude
 Here is the query:
 ```SQL
 SELECT
-    ROUND(LONG_W, 4)
+    ROUND(LONG_W, 4) AS long_max_lat
 FROM station 
 WHERE LAT_N =
       (SELECT MAX(LAT_N)
@@ -28,3 +28,10 @@ WHERE LAT_N =
 
 **Explanation of the Query:**
 
+- SELECTROUND(LONG_W, 4): rounds the result to 4 decimal places, ensuring the output is precise to 4 decimal digits.
+
+- AS long_max_lat: Gives the result an alias (long_max_lat) for easier readability and access in the result set.
+  
+- FROM station: Specifies the STATION table as the source of data.
+
+- 
