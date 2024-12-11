@@ -22,13 +22,13 @@ WHERE LAT_N > 38.7780;
 ```
 **Explanation of the Query:**
 
-- SELECT TRUNC(MAX(LAT_N), 4):
-  - MAX(LAT_N): returns the maximum of all values in the LAT_N column that meet the conditions.
+- SELECT ROUND(MIN(LAT_N), 4):
+  - MIN(LAT_N): returns the minimum of all values in the LAT_N column that meet the conditions.
 
-  - TRUNC(..., 4): truncates the result to 4 decimal places, ensuring the output is precise to 4 decimal digits without rounding. Read more about the TRUNC function [here.](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/TRUNC-number.html)
+  - ROUND(..., 4): rounds the result to 4 decimal places, ensuring the output is precise to 4 decimal digits. 
 
-- AS max_lat: Gives the result an alias (max_lat) for easier readability and access in the result set.
+- AS min_lat: Gives the result an alias (min_lat) for easier readability and access in the result set.
   
 - FROM station: Specifies the STATION table as the source of data.
 
-- WHERE **LAT_N < 137.2345**: Filters rows where the LAT_N column's values less than **137.2345**. Only these rows are considered for the max calculation.
+- WHERE **LAT_N > 38.7780**: Filters rows where the LAT_N column's values greater than **38.7780**. Only these rows are considered for the min calculation.
