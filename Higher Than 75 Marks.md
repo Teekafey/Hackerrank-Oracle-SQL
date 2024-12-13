@@ -28,6 +28,8 @@ Julia
 Belvet
 ```
 
+Only Ashley, Julia, and Belvet have Marks >__75__ . If you look at the last three characters of each of their names, there are no duplicates and 'ley' < 'lia' < 'vet'.
+
 ----------------------------------------
 
 Here is the query:
@@ -55,4 +57,3 @@ ORDER BY SUBSTR(name, -3) ASC,
  
   id ASC: If two or more students have the same last three characters in their name, it orders them by __id__ in ascending order as a secondary sorting criterion.
 
-Only Ashley, Julia, and Belvet have Marks >__75__ . If you look at the last three characters of each of their names, there are no duplicates and 'ley' < 'lia' < 'vet'.
