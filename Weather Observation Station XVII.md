@@ -44,7 +44,7 @@ WHERE LAT_N =
   
   - WHERE LAT_N > 38.7780: This filters the results to only include rows where the LAT_N value is greater than 38.7780.
 
-  - WHERE LAT_N = ...: This part takes the result of the subquery (the minimum LAT_N value) and filters the main query to only include rows with that exact LAT_N value.
+  - WHERE LAT_N = . . . : This part takes the result of the subquery (the minimum LAT_N value) and filters the main query to only include rows with that exact LAT_N value.
 
 -----------------------------------------
 
