@@ -15,6 +15,7 @@ The __STATION__ table is described as follows:
 
 where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude.
 
+**Here's the Query:**
 ```SQL
 SELECT ROUND(MIN(LAT_N), 4) as min_lat
 FROM station
