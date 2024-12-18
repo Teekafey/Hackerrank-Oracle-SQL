@@ -36,4 +36,12 @@ The CITY and COUNTRY tables are described as follows:
 
 
 
-Here is the query:
+**Here is the query**:
+```SQL
+SELECT SUM(ci.population)
+FROM city ci
+INNER JOIN country co
+ON CITY.countrycode = COUNTRY.code
+WHERE co.country = 'Asia'
+GROUP BY co.continent;
+```
