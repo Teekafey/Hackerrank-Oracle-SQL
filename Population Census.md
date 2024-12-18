@@ -50,10 +50,10 @@ GROUP BY co.continent;
 
 - SELECT SUM(ci.population): Calculates the total population by adding up the population values for all rows that match the specified condition. It also uses the _"ci"_ alias to refer to the **CITY** table, since we are using a JOIN.
 
-- FROM city ci INNER JOIN country co: Joins the __CITY__ and __COUNTRY__ tables with alias _"ci"_ and _"co"_ respectively. It also used the joined table as the source table.
+- FROM city ci INNER JOIN country co: Combines the __CITY__ and __COUNTRY__ tables with alias _"ci"_ and _"co"_ respectively. It also used the joined table as the source table.
 
 - ON CITY.countrycode = COUNTRY.code:
 
-- WHERE co.continent = 'Asia': Filters the results to include only those rows where the continent is "Asia".
+- WHERE co.continent = 'Asia': Filters the results to include only those rows where the continent column in the country table is equal to "Asia".
 
-- GROUP BY co.continent:  Groups the data by each continent in the Country table (co.Continent), so the aggregate functions (like AVG) are calculated for each group (continent) independently.
+- GROUP BY co.continent:  Groups the data by each continent in the Country table (co.Continent), so the aggregate functions (like SUM) are calculated for each group (continent) independently.
