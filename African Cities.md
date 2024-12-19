@@ -54,5 +54,5 @@ WHERE co.continent = 'Afrcia';
 
 - ON ci.countrycode = co.code: Defines the condition for the join; the __countrycode__ column in the city table must match the __code__ column in the country table. This ensures that each city is matched with the corresponding country.
 
-- WHERE co.continent = 'Asia': Filters the results to include only those rows where the continent column in the country table is equal to "Asia".
+- WHERE co.continent = 'Asia': Filters the results to include only those rows where the continent column in the country table is equal to "Africa".
 
