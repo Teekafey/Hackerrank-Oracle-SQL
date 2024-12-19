@@ -39,5 +39,11 @@ The CITY and COUNTRY tables are described as follows:
 
 **Here is the query**:
 ```SQL
-
+SELECT ci.name AS city_names
+FROM city ci
+JOIN country co
+ON ci.countrycode = co.code
+WHERE co.continent = 'Afrcia';
 ```
+
+
