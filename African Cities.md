@@ -43,16 +43,16 @@ SELECT ci.name AS city_names
 FROM city ci
 JOIN country co
 ON ci.countrycode = co.code
-WHERE co.continent = 'Afrcia';
+WHERE co.continent = 'Africa';
 ```
 
 **Explanation of the Query:**
 
-- SELECT ci.name AS city_names: Retrieves all names in te city table for all rows that match the specified condition. It also uses the _"ci"_ alias to refer to the **CITY** table, since we are using a JOIN.
+- SELECT ci.name AS city_names: Retrieves all names in the city table for all rows that match the specified condition. It also uses the _"ci"_ alias to refer to the **CITY** table, since we are using a JOIN.
 
 - FROM city ci INNER JOIN country co: Combines the __CITY__ and __COUNTRY__ tables with alias _"ci"_ and _"co"_ respectively. It also uses the joined table as the source table.
 
 - ON ci.countrycode = co.code: Defines the condition for the join; the __countrycode__ column in the city table must match the __code__ column in the country table. This ensures that each city is matched with the corresponding country.
 
-- WHERE co.continent = 'Asia': Filters the results to include only those rows where the continent column in the country table is equal to "Africa".
+- WHERE co.continent = 'Africa': Filters the results to include only those rows where the continent column in the country table is equal to "Africa".
 
