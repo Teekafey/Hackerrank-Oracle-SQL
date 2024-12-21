@@ -57,12 +57,24 @@ Values in the tuple __$(13, 14, 30)$__ cannot form a triangle because the combin
 ```SQL
 SELECT 
     (CASE 
-         WHEN (A=B AND B=C AND C=A) THEN 'Equilateral'
-         WHEN (A=B OR A=C OR B=C) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Isosceles'
-         WHEN (A <> B AND B <>C AND C <> A) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Scalene'
+         WHEN (A = B AND B = C AND C = A) THEN 'Equilateral'
+         WHEN (A = B OR A = C OR B = C) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Isosceles'
+         WHEN (A != B AND B != C AND C != A) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Scalene'
      ELSE 'Not A Triangle'
-     END) as Triangle_type
+     END) AS Triangle_type
 FROM TRIANGLES;
 ```
 
+**Explanation of the Query**
 
+- SELECT (CASE . . . END) : Starts the query to select data from the TRIANGLES table, begins the CASE statement, which evaluates a series of conditions to determine the type of triangle, then ends the case statement.
+
+- WHEN (A = B AND B = C AND C = A) THEN 'Equilateral': An equilateral triangle has all three sides of equal length. It checks if all three sides are equal and returns 'Equilateral'.
+
+- WHEN (A = B OR A = C OR B = C) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Isosceles': Checks if any two sides are equal with the OR statement. It also verifies the triangle inequality rule: __A + B > C, B + C > A, C + A > B__. If true, the triangle is classified as 'Isosceles'. An isosceles triangle has at least two equal sides, but it must also form a valid triangle.
+
+- WHEN (A != B AND B != C AND C != A) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Scalene': Checks if all three sides are different. It also verifies the triangle inequality rule: __A + B > C, B + C > A, C + A > B__. A scalene triangle has all sides of different lengths and must form a valid triangle.
+
+- AS Triangle_type: The result of the CASE statement is given an alias.
+
+- FROM TRIANGLES: Specifies the source table (TRIANGLES) containing the data.
