@@ -55,11 +55,14 @@ Values in the tuple __$(13, 14, 30)$__ cannot form a triangle because the combin
 
 **Here's the Query**
 ```SQL
-SELECT
-    (CASE WHEN (A = B AND B = C AND A = C) THEN 'Equilateral'
-          WHEN (A = B OR B = C OR A = C) AND (A + B > C AND B + C > A ABD A + C > B) THEN 'Isosceles'
-          WHEN (A != B AND B != C AND A != C) AND ( A + B > C AND B + C > A ABD A + C > B) THEN 'Scalene'
-     ELSE 'Not a Triangle'
-     END)
-FROM Triangles;
+SELECT 
+    (CASE 
+         WHEN (A=B AND B=C AND C=A) THEN 'Equilateral'
+         WHEN (A=B OR A=C OR B=C) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Isosceles'
+         WHEN (A <> B AND B <>C AND C <> A) AND (A + B > C AND B + C > A AND C + A > B) THEN 'Scalene'
+     ELSE 'Not A Triangle'
+     END) as Triangle_type
+FROM TRIANGLES;
 ```
+
+
