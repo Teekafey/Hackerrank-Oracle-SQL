@@ -12,18 +12,38 @@ __Input Format__
 
 The __TRIANGLES__ table is described as follows:
 
+|Column       | Type                     
+|------------ | ---------
+|A            | Integer
+|B            | Integer
+|C            | Integer
 
 Each row in the table denotes the lengths of each of a triangle's three sides.
 
 __Sample Input__
 
+|Column       | Type                     
+|------------ | ---------
+|A            | Integer
+|B            | Integer
+|C            | Integer
+
 
 __Sample Output__
 
 ```
-
+Isosceles
+Equilateral
+Scalene
+Not A Triangle
 ```
 
 __Explanation__
 
-Values in the tuple __$(20, 20, 23)$__ form an Isosceles triangle, because __$A \equiv B$.
+Values in the tuple __$(20, 20, 23)$__ form an Isosceles triangle, because __$`A \equiv B`$__. 
+
+Values in the tuple __$(20, 20, 20)$__ form an Equilateral triangle, because __$`A \equiv B \equiv C`$__.
+
+Values in the tuple __$(20, 21, 22)$__ form a Scalene triangle, because __$`A \neq B \neq C`$__.
+
+Values in the tuple __$(13, 14, 30)$__ cannot form a triangle because the combined value of sides __A__ and __B__ is not larger than that of side __C__.
