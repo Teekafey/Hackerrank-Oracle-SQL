@@ -22,12 +22,12 @@ Each row in the table denotes the lengths of each of a triangle's three sides.
 
 __Sample Input__
 
-|Column       | Type                     
-|------------ | ---------
-|A            | Integer
-|B            | Integer
-|C            | Integer
-
+|A       |B      |C                     
+|------- |------ |------
+|20      |       |
+|20      |       |
+|20      |       |
+|13      |       |
 
 __Sample Output__
 
