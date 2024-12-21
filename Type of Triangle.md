@@ -20,6 +20,8 @@ The __TRIANGLES__ table is described as follows:
 
 Each row in the table denotes the lengths of each of a triangle's three sides.
 
+-------------------------------
+
 __Sample Input__
 
 |A       |B      |C                     
@@ -37,6 +39,7 @@ Equilateral
 Scalene
 Not A Triangle
 ```
+------------------------------------
 
 __Explanation__
 
@@ -47,3 +50,16 @@ Values in the tuple __$(20, 20, 20)$__ form an Equilateral triangle, because __$
 Values in the tuple __$(20, 21, 22)$__ form a Scalene triangle, because __$`A \neq B \neq C`$__.
 
 Values in the tuple __$(13, 14, 30)$__ cannot form a triangle because the combined value of sides __A__ and __B__ is not larger than that of side __C__.
+
+------------------------------------------
+
+**Here's the Query**
+```SQL
+SELECT
+    (CASE WHEN (A = B AND B = C AND A = C) THEN 'Equilateral'
+          WHEN (A = B OR B = C OR A = C) AND (A + B > C AND B + C > A ABD A + C > B) THEN 'Isosceles'
+          WHEN (A != B AND B != C AND A != C) AND ( A + B > C AND B + C > A ABD A + C > B) THEN 'Scalene'
+     ELSE 'Not a Triangle'
+     END)
+FROM Triangles;
+```
