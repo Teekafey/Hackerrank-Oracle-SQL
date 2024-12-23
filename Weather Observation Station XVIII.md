@@ -40,3 +40,7 @@ FROM  station;
 - MAX(lat_n) and MIN(lat_n): These find the maximum and minimum northern latitude values, respectively.
 
 - MAX(long_w) and MIN(long_w): These find the maximum and minimum western longitude values, respectively.
+
+- ABS(MAX(lat_n) - MIN(lat_n)): Calculates the absolute difference between the maximum and minimum northern latitude values. This represents the distance in the latitude direction.
+
+- 
