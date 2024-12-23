@@ -25,3 +25,18 @@ where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude
 **Here's the Query:**
 
 ```SQL
+SELECT ROUND(
+             ABS(MAX(lat_n)- MIN(lat_n)) + ABS(MAX(long_w)- MIN(long_w))
+             ,4) 
+FROM  station;
+```
+
+**Explanation of the Query**
+
+- SELECT ROUND(. . . , 4): Rounds the result to 4 decimal places, ensuring the output is precise to 4 decimal digits.
+
+- ABS(. . .) + ABS(. . .): Adds the two absolute differences to calculate the total Manhattan Distance.
+
+- MAX(lat_n) and MIN(lat_n): These find the maximum and minimum northern latitude values, respectively.
+
+- MAX(long_w) and MIN(long_w): These find the maximum and minimum western longitude values, respectively.
