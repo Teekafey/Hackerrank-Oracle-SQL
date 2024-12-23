@@ -43,4 +43,5 @@ FROM  station;
 
 - ABS(MAX(lat_n) - MIN(lat_n)): Calculates the absolute difference between the maximum and minimum northern latitude values. This represents the distance in the latitude direction.
 
-- 
+- ABS(MAX(long_w) - MIN(long_w)): Calculates the absolute difference between the maximum and minimum western longitude values. This represents the distance in the longitude direction.
+
