@@ -22,6 +22,8 @@ The __STATION__ table is described as follows:
 
 where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude.
 
+**_In a plane with $`P_1`$ at (a, b) and $`P_2`$ at (c, d), it is |a - c| + |b - d|._**
+
 **Here's the Query:**
 
 ```SQL
@@ -45,3 +47,4 @@ FROM  station;
 
 - ABS(MAX(long_w) - MIN(long_w)): Calculates the absolute difference between the maximum and minimum western longitude values. This represents the distance in the longitude direction.
 
+- FROM station: Specifies the STATION table as the source of data.
