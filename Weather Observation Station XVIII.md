@@ -22,7 +22,7 @@ The __STATION__ table is described as follows:
 
 where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude.
 
-**_In a plane with $`P_1`$ at (a, b) and $`P_2`$ at (c, d), it is |a - c| + |b - d|._**
+**_In a plane with $`P_1`$ at (a, b) and $`P_2`$ at (c, d), the Manhattan distance is $`|a - c| + |b - d|`$._**
 
 **Here's the Query:**
 
