@@ -23,7 +23,7 @@ where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude
 
 ```SQL
 SELECT ROUND(
-             SQRT(POWER((MAX(lat_n)- MIN(lat_n)), 2) + POWER((MAX(long_w)- MIN(long_w)), 2))
+             SQRT(POWER((MIN(lat_n)- MAX(lat_n)), 2) + POWER((MIN(long_w)- MAX(long_w)), 2))
              ,4) 
 FROM  station;
 ```
@@ -36,12 +36,12 @@ FROM  station;
 
 - POWER(. . . , 2) + POWER(. . . , 2): Calculates the 2nd power of each of the two operations and adds them together.
 
-- MAX(lat_n) and MIN(lat_n): These find the maximum and minimum northern latitude values, respectively.
+- MIN(lat_n) and MAX(lat_n): These find the minimum and maximum northern latitude values, respectively.
 
-- MAX(long_w) and MIN(long_w): These find the maximum and minimum western longitude values, respectively.
+- MIN(long_w) and MAX(long_w): These find the minimum and maximum western longitude values, respectively.
 
-- POWER((MAX(lat_n) - MIN(lat_n)), 2): Calculates the difference between the maximum and minimum northern latitude values and raises them to the second power.
+- POWER((MIN(lat_n)- MAX(lat_n)), 2): Calculates the difference between the minimum and maximum northern latitude values and raises them to the second power. It results a positive number becasue it is squared.
 
-- ABS(MAX(long_w) - MIN(long_w)): Calculates the difference between the maximum and minimum western longitude values and raises them to the second power.
+- POWER((MIN(long_w)- MAX(long_w)), 2): Calculates the difference between the minimum and maximum western longitude values and raises them to the second power. It results a positive number becasue it is squared.
 
 - FROM station: Specifies the STATION table as the source of data.
