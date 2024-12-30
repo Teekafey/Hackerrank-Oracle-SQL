@@ -13,7 +13,7 @@ The __STATION__ table is described as follows:
 |LAT_N        | NUMBER
 |LONG_W       | NUMBER
 
-where __LAT_N__ is the northern latitude and __LONG_W_ is the western longitude.
+where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude.
 
 **Here's the Query:**
 
