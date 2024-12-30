@@ -13,7 +13,7 @@ The __STATION__ table is described as follows:
 |LAT_N        | NUMBER
 |LONG_W       | NUMBER
 
-where __LAT_N__ is the northern latitude and __LONG_W__ is the western longitude.
+where __LAT_N__ is the northern latitude and __LONG_W_ is the western longitude.
 
 **Here's the Query:**
 
@@ -24,6 +24,6 @@ FROM STATION;
 
 **Explanation of the Query**
 
-- SELECT ROUND(MEDIAN(LAT_N), 4): Calculates the median of the set of lat_n values and then rounds the result to 4 decimal places, ensuring the output is precise to 4 decimal digits.
+- SELECT ROUND(MEDIAN(LAT_N), 4): Calculates the **median** of the set of lat_n values and then rounds the result to 4 decimal places, ensuring the output is precise to 4 decimal digits.
 
 - FROM station: Specifies the STATION table as the source of data.
